@@ -214,9 +214,6 @@ make run  # Foreground mode for debugging
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-
-This project is part of the Satcom Projects collection.
 
 ## Support
 
